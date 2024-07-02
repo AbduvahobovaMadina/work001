@@ -1,0 +1,52 @@
+.product{
+    width: 100%;
+    margin-bottom: 50px;
+    &__wrapper{
+        position: relative;
+        margin-top: -300px;
+        z-index: 101;
+        margin: -300px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        @media (max-width:850px) {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 10px;
+        }
+        @media (max-width:390px) {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+        .gaming{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #fff;
+            padding: 20px 20px 40px 20px;
+            cursor: pointer;
+            @media (max-width:850px) {
+                background: rgba(0, 0, 0, 0.036);
+            }
+            &:hover{
+                box-shadow: 0 0 10px #ddd;
+            }
+            &__wrapper{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                @media (max-width:850px) {
+                    display: grid;
+                    gap: 5px;
+                }
+            }
+            .image{
+                width: 100%;
+            }
+            .picture{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
